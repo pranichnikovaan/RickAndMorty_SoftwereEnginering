@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+
+    <script>
+        var assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+<script>
+
+    describe("appsReducer", function() {
+
+        function appsReducer(state=initialState, action) {
+            String[] arr=[characters,allCharacters, currentPage, searchText, speciesFilter, statusFilter, currentCharacter,
+                currentLocation];
+            it("add data in state " + arr +  expected, function() {
+                assert.equal(appsReducer(state=initialState, arr), expected);
+            });
+        }
+
+    });
+
+    describe("Apps", function() {
+
+        function Apps(props) {
+            a = props.isCurrentCharacter;
+            it("nonstopApp " + a +  expected, function() {
+                assert.equal(Apps(props, a), expected);
+            });
+        }
+
+    });
+
+    describe("FilterTransform", function() {
+
+        function FilterTransform(data, condition, action) {
+            String[] arr2=[name, condition,action];
+            it("add data  " + arr2 +  expected, function() {
+                assert.equal(appsReducer(data, condition, action, arr2), expected);
+            });
+        }
+
+    });
+
+    const FilterTransform = (data, condition, action) => {
+        return data.map(el => <FilterControl key={el} name={el} condition={condition} action={action}/>)
+    }
+
+</script>
+
+
+<script src="test.js"></script>
+
+
+<div id="mocha"></div>
+
+
+<script>
+    mocha.run();
+</script>
+</body>
+
+</html>
