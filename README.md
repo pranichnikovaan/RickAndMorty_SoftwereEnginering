@@ -1,1 +1,1 @@
-# project.spbstu_NISSAN
+RickAndMorty_SoftwereEnginering
