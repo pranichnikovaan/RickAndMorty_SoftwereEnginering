@@ -4,6 +4,7 @@ import logo from '../../assets/Mask Group.svg'
 import title from '../../assets/TestTaskApp.svg'
 import style from '../../styles/styles'
 
+
 const Menu = props => {
     return (
         <aside className="p-5 rounded d-flex flex-column" style={style.menu.asideMenuStyle}>
